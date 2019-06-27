@@ -1,0 +1,12 @@
+
+# testNG
+test-output/
+
+# eclipse project file
+.settings/
+.classpath
+.project
+
+/lib/
+/bin/
+/ConsoleReports/
