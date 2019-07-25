@@ -7,6 +7,5 @@ test-output/
 .classpath
 .project
 
-/lib/
 /bin/
 /ConsoleReports/

@@ -21,7 +21,7 @@ public class BaseTest implements Utilities.Constants {
 		System.setProperty(ChromeDriverKey, ChromeDriverPath);
 		System.setProperty(FireFoxDriverKey, FireFoxDriverPath);
 		System.setProperty(IEDriverKey, IEDriverPath);
-        driver.set(new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), capabilityFactory.getCapabilities(browser)));
+        driver.set(new RemoteWebDriver(new URL("http://10.60.68.143:4444/wd/hub"), capabilityFactory.getCapabilities(browser)));
     }
 
     public WebDriver getDriver() {
