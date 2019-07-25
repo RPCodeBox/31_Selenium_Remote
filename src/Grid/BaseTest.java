@@ -8,7 +8,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 
-public class BaseTest {
+public class BaseTest implements Utilities.Constants {
 
     //Declare ThreadLocal Driver (ThreadLocalMap) for ThreadSafe Tests
     protected static ThreadLocal<RemoteWebDriver> driver = new ThreadLocal<>();
@@ -18,6 +18,9 @@ public class BaseTest {
     @Parameters(value={"browser"})
     public void setup (String browser) throws MalformedURLException {
         //Set Browser to ThreadLocalMap
+		System.setProperty(ChromeDriverKey, ChromeDriverPath);
+		System.setProperty(FireFoxDriverKey, FireFoxDriverPath);
+		System.setProperty(IEDriverKey, IEDriverPath);
         driver.set(new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), capabilityFactory.getCapabilities(browser)));
     }
 

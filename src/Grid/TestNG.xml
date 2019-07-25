@@ -4,7 +4,7 @@
     <test name="Grid.FirstTest" parallel="methods" thread-count="5">
         <parameter name="browser" value="chrome"/>
         <classes>
-            <class name="FirstTest">
+            <class name="Grid.FirstTest">
                 <methods>
                     <include name="GOOGLE1" />
                     <include name="GOOGLE2" />
@@ -16,7 +16,7 @@
     <test name="Grid.SecondTest"  parallel="methods" thread-count="5">
         <parameter name="browser" value="firefox"/>
         <classes>
-            <class name="SecondTest">
+            <class name="Grid.SecondTest">
                 <methods>
                     <include name="GOOGLE4" />
                     <include name="YANDEX" />

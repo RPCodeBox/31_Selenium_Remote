@@ -4,9 +4,6 @@ import org.testng.annotations.*;
 
 import Utilities.CSVUtility;
 import Utilities.Constants;
-import Utilities.TestData01;
-
-import java.util.List;
 import java.io.IOException;
 
 public class TestDataScript implements Constants{
@@ -18,23 +15,21 @@ public class TestDataScript implements Constants{
 		String strTestDataFile = CSV3;
 		return CSVUtility.getCSVData(strTestDataFile);
 	}
-
 	//TestData01.csv file used an array object for test data usage
 	@Test(dataProvider = "TestData01")
 	public void test1(String strField1, String strField2, String strField3, String strField4, String strField5){
 		System.out.println(strField1 + " : " + strField2 + " : " + strField3 + " : " + strField4 + " : " + strField5);
 		//Test steps to follow
 	}
-
 	//TestData01.csv file used as an List collection for a test
-	@Test()
+	/*@Test()
 	public void test2() throws Exception{
 		List<TestData01> list = CSVUtility.getSampleTestData(CSV3);
     	for(TestData01 c:list) {
-			System.out.println(c.Field1 + " " + c.Field2 + " " + c.Field3 + " " + c.Field4 + " " + c.Field5);
+			//System.out.println(c.Field1 + " " + c.Field2 + " " + c.Field3 + " " + c.Field4 + " " + c.Field5);
 			//Test steps to follow
     	}
-	}
+	}*/
 
 	//Config CSV file used to read and update (set) a specific values and Object library used for reading specific object property 
 	@Test

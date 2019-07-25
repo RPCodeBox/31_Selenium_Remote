@@ -16,4 +16,5 @@ public interface Constants {
 	public static String CSV1 = "./src/TestData/Config.csv";
 	public static String CSV2 = "./src/ObjectLibrary/ObjectLibrary.csv";
 	public static String CSV3 = "./src/TestData/TestData01.csv";
+	public static String CSV4 = "./src/TestData/Book1.csv";
 }
