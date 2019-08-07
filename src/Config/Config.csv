@@ -1,0 +1,13 @@
+Variable,Value
+URL,https://ete6-papc.cna.com/pc/PolicyCenter.do
+Platform,Windows
+Browser,Firefox
+ImplicitWait,30
+SHORT_WAIT,2000
+MEDIUM_WAIT,5000
+LONG_WAIT,8000
+EPC_ID,epc06
+EPC_PASSWORD,cna123
+MyReport,TestReport
+UseGrid,No
+HubURL,http://10.12.24.229:4444/wd/hub

@@ -29,15 +29,13 @@ import java.io.FileWriter;
 
 public class CSVUtility implements Constants {
 	public static List<ConfigFile> configSet = getConfigData(CSV1);
-	public static List<ObjectFile> objRepo = getObjectLibraryData(CSV2);
-
+	public static List<ObjectFile> objRepo = getObjectLibraryData(ObjRepo1);
 	private static String strReturn = null;
 
 	// ================================================================================================================
 	// CONFIG FILE FUNCTIONS
 	// ================================================================================================================
-	/*
-	 * Function: getConfigCSVData(String ConfigPath) Description: To get data as
+	/* Function: getConfigCSVData(String ConfigPath) Description: To get data as
 	 * ArrayList for the application objects Return: Application objects referred in
 	 * ObjectFile path ObjectFile is a construct with columns for Module, Element,
 	 * ID and Value
@@ -64,8 +62,9 @@ public class CSVUtility implements Constants {
 
 	/*
 	 * Function: GetCSVValue Description: Returns specific value of a collection
-	 * Description: Returns a specific fileds values
+	 * Description: Returns a specific fields values
 	 */
+
 	public static String getConfigValue(String strField) throws IOException {
 		if (configSet.isEmpty()) {
 			return null;
@@ -126,8 +125,7 @@ public class CSVUtility implements Constants {
 			List<Object[]> list = java.util.Arrays.asList(ObjectData);
 			objectSet = new ArrayList<ObjectFile>();
 			for (Object[] data : list) {
-				ObjectFile C = new ObjectFile(data[0].toString(), data[1].toString(), data[2].toString(),
-						data[3].toString());
+				ObjectFile C = new ObjectFile(data[0].toString(), data[1].toString(), data[2].toString(),data[3].toString());
 				objectSet.add(C);
 			}
 		} catch (IOException e) {
@@ -164,8 +162,7 @@ public class CSVUtility implements Constants {
 			List<Object[]> list = java.util.Arrays.asList(ObjectData);
 			testData = new ArrayList<TestData01>();
 			for (Object[] data : list) {
-				TestData01 C = new TestData01(data[0].toString(), data[1].toString(), data[2].toString(),
-						data[3].toString(), data[4].toString());
+				TestData01 C = new TestData01(data[0].toString(), data[1].toString(), data[2].toString(), data[3].toString(), data[4].toString());
 				testData.add(C);
 			}
 		} catch (IOException e) {
@@ -200,7 +197,13 @@ public class CSVUtility implements Constants {
 			int rowcnt = 0;
 			while ((strrowdta = bfrreader.readLine()) != null) {
 				strrowinfo = strrowdta.split(",");
-				for (int i = 0; i < strrowinfo.length; i++) {
+				//comma in xpath taken as split
+				if(strrowinfo.length > intcolcount) {
+					for(int i = intcolcount; i < strrowinfo.length; i++) {
+						strrowinfo[intcolcount-1]= strrowinfo[intcolcount-1] + strrowinfo[i];
+					}
+				}
+				for (int i = 0; i < intcolcount; i++) {
 					strData[rowcnt][i] = strrowinfo[i];
 				}
 				rowcnt++;
@@ -231,38 +234,6 @@ public class CSVUtility implements Constants {
 		int columncnt = bfrReader.readLine().split(",").length;
 		bfrReader.close();
 		return columncnt;
-	}
-}
-
-// Construct for ConfiFile
-class ConfigFile {
-	String Field;
-	String Value;
-
-	public ConfigFile(String Field, String Value) {
-		this.Field = Field;
-		this.Value = Value;
-	}
-
-	public String getField() {
-		return Field;
-	}
-
-	public void setField(String Field) {
-		this.Field = Field;
-	}
-
-	public String getValue() {
-		return Value;
-	}
-
-	public void setValue(String Value) {
-		this.Value = Value;
-	}
-
-	@Override
-	public String toString() {
-		return "\nField= " + getField() + "::Value= " + getValue();
 	}
 }
 

@@ -1,8 +1,8 @@
-set projectLocation=D:\PROJECTS\Workspace\EPC_SeleniumTestNG
+set projectLocation=D:\Projects\Workspace\EPC_SeleniumTestNG
 
 cd %projectLocation%
 
 set classpath=%projectLocation%\bin;%projectLocation%\lib\*
 
-java org.testng.TestNG %projectLocation%\src\Grid\testng.xml
+java org.testng.TestNG %projectLocation%\testng.xml
 

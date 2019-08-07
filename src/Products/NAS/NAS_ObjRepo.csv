@@ -1,0 +1,41 @@
+PAGE,OBJECT,ID,VALUE
+Login,txtEPCID,xpath,//input[@name='username']
+Login,txtPassword,xpath,//input[@name='password']
+Login,btnLogin,xpath,//button[@name='login']
+NAS_NewAccCreat,eltActions,xpath,//span[@id='Desktop:DesktopMenuActions-btnInnerEl']
+NAS_NewAccCreat,eltNewSubmision,xpath,//span[text()='New Submission']
+NAS_NewAccCreat,eltSearch,xpath,//a[(@id='NewAccount:NewAccountScreen:CNAAccountSearchDV:SearchAndResetInputSet:SearchLinksInputSet:Search')]
+NAS_NewAccCreat,eltCreateNewAccount,xpath,//span[@id='NewAccount:NewAccountScreen:NewAccountButton-btnInnerEl']
+NAS_NewAccCreat,eltNewCompany,xpath,//span[text()='Company']
+NAS_NewAccCreat,btnCancel,xpath,//input[@id='CNACreateAccount:CNACreateAccountScreen:Cancel-btnInnerEl']
+NAS_NewAccCreat,txtAccHolder,xpath,"//*[contains(@id,'AccountNumber-inputEl')]"
+NAS_NewAccCreat,txtAddressLine,xpath,"//input[contains(@id,'GlobalAddressInputSet:AddressLine1-inputEl')]"
+NAS_NewAccCreat,txtCity,xpath,"//input[contains(@id,'GlobalAddressInputSet:City-inputEl')]"
+NAS_NewAccCreat,txtState,xpath,"//input[contains(@id,'GlobalAddressInputSet:State-inputEl')]"
+NAS_NewAccCreat,txtZIP,xpath,"//input[contains(@id,'GlobalAddressInputSet:PostalCode-inputEl')]"
+NAS_NewAccCreat,eltStandardizeAddress,xpath,"//a[contains(@id,'GlobalAddressInputSet:StandardizeAddress')]"
+NAS_NewAccCreat,eltSICSearchIcon,xpath,"//div[contains(@id,'IndustryCode:SelectIndustryCode')]"
+NAS_NewAccCreat,txtSICCode,xpath,"//input[contains(@id,'IndustryCodeSearchDV:Code-inputEl')]"
+NAS_NewAccCreat,eltSelect,xpath,"//a[contains(@id,'IndustryCodeSearchResultsLV:0:_Select')]"
+NAS_NewAccCreat,eltDistributorSearchIcon,xpath,"//div[contains(@id,'ProducerSelectionInputSet:ProducerCode:SelectProducerCode')]"
+NAS_NewAccCreat,eltDistributorsearch,xpath,"//a[contains(@id,'SearchAndResetInputSet') and text() = 'earch']"
+NAS_NewAccCreat,txtDistributorCode,xpath,"//input[contains(@id,'DistributorCode-inputEl')]"
+NAS_NewAccCreat,txtDistributorCode,xpath,"//input[contains(@id,'DistributorCode-inputEl')]"
+NAS_NewSubmissionCreation,txtBusinessArea,xpath,"//input[contains(@id,'BusinessArea-inputEl')]"
+NAS_NewSubmissionCreation,txtReceivedDate,xpath,"//input[contains(@id,'CNAReceivedDate-inputEl')]"
+NAS_NewSubmissionCreation,txtEffectiveDate,xpath,"//input[contains(@id,'DefaultPPEffDate-inputEl')]"
+NAS_NewSubmissionCreation,txtPrefix,xpath,"(//div[contains(@id,'CNAProductSelectionLV')]//tr[4]/td/div)[1]"
+NAS_NewSubmissionCreation,eltUWSearchIcon,xpath,"//div[contains(@id,'SelectAssignedUnderWriter')]"
+NAS_NewSubmissionCreation,eltUTSearchIcon,xpath,"//div[contains(@id,'SelectAssignedUnderwriterTechnician')]"
+NAS_NewSubmissionCreation,txtCID,xpath,"//input[contains(@id,'Username-inputEl')]"
+NAS_NewSubmissionCreation,eltSelect,xpath,"//a[contains(@id,'UserSearchResultsLV:0:_Select')]"
+NAS_NewSubmissionCreation,eltSubmit,xpath,"//span[contains(@id,'MakeSubmissions-btnInnerEl')]"
+NAS_NewSubmissionCreation,eltPolNumber,xpath,"//a[contains(@id,'subConPolicyShellLV:0:subConPolicyNo')]"
+NAS_NewSubmissionCreation,eltComplexityerror,xpath,"//*[contains(@id,'NewSubmission:NewSubmissionScreen:_msgs')]/div"
+NAS_NewSubmissionCreation,eltAccountFileSummary,xpath,"//span[contains(@id,'AccountFile_SummaryScreen:ttlBar')]"
+NAS_NewSubmissionCreation,chckBox,xpath,"//input[contains(@id,'setupandDecline-inputEl')]"
+NAS_NewSubmissionCreation,eltPrimary,xpath,"//input[contains(@id,'PrimaryReason-inputEl')]"
+NAS_NewSubmissionCreation,eltReason,xpath,"//div[contains(@class,'x-boundlist-default x-border-box x-boundlist-above')]"
+NAS_NewSubmissionCreation,eltSecondary,xpath,"//input[contains(@id,'SecondaryReason-inputEl')]"
+NAS_NewSubmissionCreation,eltComplexity,xpath,"(//div[contains(@id,'CNAProductSelectionLV')]//tr[6]/td[8]/div)[1]"
+NAS_NewSubmissionCreation,eltCompleted,xpath,//tbody/tr/td[5]/div
