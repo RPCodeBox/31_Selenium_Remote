@@ -2,7 +2,7 @@ package Products.EPC_Library;
 /* NAME: EPC_Library
  * Description: Library for generic reusable functions of EPC application
  * Version, Data, Developer
- * 1.0, 1st Aug 2019, Rana Pratap 
+ * 1.0, 1st Aug 2019,  
  */
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
