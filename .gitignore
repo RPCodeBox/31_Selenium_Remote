@@ -5,7 +5,7 @@ test-output/
 # eclipse project file
 .settings/
 .classpath
-.project
 
 /bin/
 /ConsoleReports/
+/target/
